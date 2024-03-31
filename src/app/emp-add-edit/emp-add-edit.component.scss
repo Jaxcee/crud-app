@@ -1,0 +1,73 @@
+.content{
+    padding-top: 10px;
+    padding-left: 40px;
+    width: 100%;
+    padding-right: 200px;
+}
+
+
+.row {
+  display: flex;
+    gap: 40px;
+  }
+  
+  .row mat-form-field {
+    width: 100%;
+  }
+  .action {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 25px;
+  }
+  
+  .action button {
+    width: 100px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    border-radius: 5px; /* Optionally, adjust border-radius for rounded corners */
+    padding: 10px 20px;
+    margin: 0 5px;
+    font: normal normal normal 20px/26px Roboto;
+    
+  }
+
+  .action button:nth-child(1):hover {
+    background-color: #ff0000; /* Red color for Cancel button */
+}
+
+.action button:nth-child(2):hover {
+    background-color: #82a70c; /* Green color for Save button */
+}
+  
+  .custom-label {
+     /* Adjust as needed */
+    display: inline-block;
+    text-align: left;
+    margin:10px;
+    /* Adjust as needed */
+    padding-top: 10px; /* Adjust as needed */
+  }
+  .user{
+    display: flex;
+    justify-content: left;
+  }
+  .start-label{
+    display: inline-block;
+    text-align: left;
+    
+    /* Adjust as needed */
+    padding-top: 5px; /* Adjust as needed */
+
+  }
+  .align{
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  input[type="text"] {
+    width: 100%; /* Adjust width to fill the available space */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  
