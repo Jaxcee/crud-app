@@ -4,17 +4,17 @@
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
   <div mat-dialog-content class="content">
     <div class="row">
-      <label class="align">NAME</label>
-      <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
+      <label class="align"><b>Name</b></label>
+      <mat-form-field class="name-box" appearance="outline">
+        <mat-label><b>Name</b></mat-label>
         <input matInput placeholder="Ex John" formControlName="name">
       </mat-form-field>
     </div>
 
     <div class="row">
       <mat-radio-group aria-label="Select an option" formControlName="profilepicture">
-        <label>Profile Picture</label>
-        <mat-radio-button value="../../assets/profileimages/Ellipse -1.png">
+        <label><b>Profile Picture</b></label>
+        <mat-radio-button class="profile-radio-button" value="../../assets/profileimages/Ellipse -1.png">
           <img src="../../assets/profileimages/Ellipse -1.png" alt="">
         </mat-radio-button>
         <mat-radio-button value="../../assets/profileimages/Ellipse -3.png">
@@ -32,14 +32,26 @@
     <div class="row">
       <mat-radio-group aria-label="Select an option" formControlName="gender">
         <mat-label><b>Gender</b></mat-label>
-        <mat-radio-button value="male">Male</mat-radio-button>
-        <mat-radio-button value="female">Female</mat-radio-button>
-        <mat-radio-button value="others">Others</mat-radio-button>
+        <mat-radio-button class="gender-radio-button" value="male">Male</mat-radio-button>
+        <mat-radio-button  value="female">Female</mat-radio-button>
+        <mat-radio-button   value="others">Others</mat-radio-button>
       </mat-radio-group>
     </div>
-    
 
     
+    <div class="row">
+      <mat-radio-group aria-label="Select an option" formControlName="department">
+        <mat-label><b>Department</b></mat-label>
+        
+        <mat-radio-button class="radio-button" value="HR">HR</mat-radio-button>
+        <mat-radio-button  value="SALES">SALES</mat-radio-button>
+        <mat-radio-button value="ENGINEER">ENGINEER</mat-radio-button>
+        <mat-radio-button  value="FINANCE">FINANCE</mat-radio-button>
+        <mat-radio-button  value="OTHER">OTHER</mat-radio-button>
+      
+      </mat-radio-group>
+    </div>
+   
     
     
     
@@ -48,20 +60,22 @@
     
     
     <div class="row">
-      <label class="align">SALARY</label>
+      <label class="align"><b>Salary</b></label>
 
-      <mat-form-field appearance="outline">
+      <mat-form-field class="name-box" appearance="outline">
         <mat-label>SALARY</mat-label>
         <input matInput type="number" formControlName="salary">
       </mat-form-field>
     </div>
 
     <div class="row">
-      <label class="align">START</label>
-      <mat-form-field appearance="outline">
+      <label  class="start-align"><b>StartDate</b></label>
+    
+      <mat-form-field class="start-name-box"  appearance="outline">
+       
         <mat-label>Start Date</mat-label>
         <input matInput [matDatepicker]="picker" formControlName="startdate">
-        <mat-hint>MM/DD/YYYY</mat-hint>
+        
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
@@ -69,9 +83,9 @@
 
 
     <div class="row">
-      <label class="align">NOTES</label>
+      <label class="align"><b>Notes</b></label>
       <div>
-        <input type="text" placeholder="Enter text here" formControlName="notes">
+        <input type="text" class="name-box"  placeholder="Enter text here" formControlName="notes">
       </div>
     </div>
   </div>

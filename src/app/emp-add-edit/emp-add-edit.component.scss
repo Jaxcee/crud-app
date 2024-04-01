@@ -31,18 +31,18 @@
   }
 
   .action button:nth-child(1):hover {
-    background-color: #ff0000; /* Red color for Cancel button */
+    background-color: #ff0000; 
 }
 
 .action button:nth-child(2):hover {
-    background-color: #82a70c; /* Green color for Save button */
+    background-color: #82a70c; 
 }
   
   .custom-label {
      /* Adjust as needed */
     display: inline-block;
     text-align: left;
-    margin:10px;
+    margin:20px;
     /* Adjust as needed */
     padding-top: 10px; /* Adjust as needed */
   }
@@ -70,4 +70,24 @@
     font-size: 16px;
   }
 
-  
+  .radio-button {
+    margin-left: 65px; /* Adjust as needed */
+  }
+  .gender-radio-button{
+    margin-left: 102px;
+  }
+
+  .profile-radio-button{
+    margin-left: 50px;
+
+  }
+  .name-box{
+    margin-left: 65px;
+  }
+  .start-align{
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+ .start-name-box{
+  margin-left: 20px;
+ }

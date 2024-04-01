@@ -17,7 +17,7 @@ import { CoreService } from '../../core/core.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  displayedColumns: string[] = ['profilepicture', 'name','gender','desigination','salary',  'startdate','notes','action'];
+  displayedColumns: string[] = ['profilepicture', 'name','gender','department','salary',  'startdate','notes','action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

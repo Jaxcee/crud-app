@@ -1,9 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { AbstractControl, FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { EmployeeService } from '../services/employee.service';
-
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-emp-add-edit',
@@ -14,26 +14,31 @@ export class EmpAddEditComponent implements OnInit {
 
   empForm: FormGroup;
   
- 
 
-   constructor(private _fb: FormBuilder,private _empService: EmployeeService,private _dialogRef: MatDialogRef<EmpAddEditComponent>, @Inject(MAT_DIALOG_DATA) public data:any ,private _coreService:CoreService){
+  
+  constructor(
+    private _fb: FormBuilder,
+    private _empService: EmployeeService,
+    private _dialogRef: MatDialogRef<EmpAddEditComponent>, 
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _coreService: CoreService
+  ) {
     this.empForm = this._fb.group({
-      name:'',
-      gender:'',
-      department:'',
-      startdate:'',
-      salary:'',
-      profilepicture:'',
-      notes:'',
-
+      name: '',
+      gender: '',
+      profilepicture: '',
+      salary: '',
+      startdate: '',
+      notes: '',
+      department: '', 
     });
-   }
+  }
 
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.empForm.patchValue(this.data);
-     
-   }
+  }
 
+  
 
 
    onFormSubmit(){
