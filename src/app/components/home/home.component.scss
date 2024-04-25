@@ -1,6 +1,9 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+  .mat-toolbar {
+    flex: 0 0 auto; /* Let the toolbar grow and shrink as needed */
+  }
   
   .addemp{
       font: normal normal normal 22px/29px Roboto;

@@ -13,6 +13,38 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
 export class EmpAddEditComponent implements OnInit {
 
   empForm: FormGroup;
+  departments: Array<any> = [
+    {
+      id: 1,
+      name: "HR",
+      value: "HR",
+      checked: false
+    },
+    {
+      id: 2,
+      name: "Sales",
+      value: "Sales",
+      checked: false 
+    },
+    {
+      id: 3,
+      name: "Finance",
+      value: "Finance",
+      checked: false  
+    },
+    {
+      id: 4,
+      name: "Engineer",
+      value: "Engineer",
+      checked: false
+    },
+    {
+      id: 5,
+      name: "Other",
+      value: "Other",
+      checked: false 
+    }
+  ]
   
 
   
@@ -30,7 +62,7 @@ export class EmpAddEditComponent implements OnInit {
       salary: '',
       startdate: '',
       notes: '',
-      department: '', 
+      department: this._fb.array([]),
     });
   }
 
